@@ -77,13 +77,14 @@
     <bean id="processEngineConfiguration" class="org.activiti.spring.SpringProcessEngineConfiguration">
         <property name="dataSource" ref="dataSource"/>
         <property name="transactionManager" ref="transactionManager"/>
-        <property name="databaseSchemaUpdate" value="false"/>
+        <property name="databaseSchemaUpdate" value="true"/>
         <property name="jobExecutorActivate" value="true"/>
         <property name="history" value="full"/>
         <property name="processDefinitionCacheLimit" value="10"/>
         <property name="idGenerator" ref="uuidGenerator"/>
         <property name="activityFontName" value="${activityFontName}"/>
         <property name="labelFontName" value="${labelFontName}"/>
+        <property name="databaseSchema" value="${jdbc.username}"/>
         <property name="deploymentResources">
             <list>
                 <value>classpath*:/repository/*</value>

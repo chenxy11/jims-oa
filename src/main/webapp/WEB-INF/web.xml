@@ -12,9 +12,9 @@
 
 
     <!--需要执行数据库版本更新时开启-->
-    <listener>
-        <listener-class>com.jims.listener.MigrationDb</listener-class>
-    </listener>
+    <!--<listener>-->
+        <!--<listener-class>com.jims.listener.MigrationDb</listener-class>-->
+    <!--</listener>-->
 
     <!--处理静态得文件-->
     <servlet-mapping>
