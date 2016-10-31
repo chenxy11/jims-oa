@@ -1,139 +1,68 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: admin
-  Date: 2016/10/25
-  Time: 17:00
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html>
 <head>
     <title>Main Page</title>
-    <%@include file="common.jsp"%>
-    <link rel="stylesheet" type="text/css" href="${ctx}/common/bootstrap/css/bootstrap.min.css">
+    <%@include file="common.jsp" %>
+    <link href="${ctx}/css/dpl-min.css" rel="stylesheet" type="text/css"/>
+    <link href="${ctx}/css/bui-min.css" rel="stylesheet" type="text/css"/>
+    <link href="${ctx}/css/main-min.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<div class="container">
-    <div class="row clearfix">
-        <div class="col-md-12 column">
-            <nav class="navbar navbar-default" role="navigation">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="#">Brand</a>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li class="active">
-                            <a href="#">Link</a>
-                        </li>
-                        <li>
-                            <a href="#">Link</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">Action</a>
-                                </li>
-                                <li>
-                                    <a href="#">Another action</a>
-                                </li>
-                                <li>
-                                    <a href="#">Something else here</a>
-                                </li>
-                                <li class="divider">
-                                </li>
-                                <li>
-                                    <a href="#">Separated link</a>
-                                </li>
-                                <li class="divider">
-                                </li>
-                                <li>
-                                    <a href="#">One more separated link</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <form class="navbar-form navbar-left" role="search">
-                        <div class="form-group">
-                            <input type="text" class="form-control" />
-                        </div> <button type="submit" class="btn btn-default">Submit</button>
-                    </form>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#">Link</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">Action</a>
-                                </li>
-                                <li>
-                                    <a href="#">Another action</a>
-                                </li>
-                                <li>
-                                    <a href="#">Something else here</a>
-                                </li>
-                                <li class="divider">
-                                </li>
-                                <li>
-                                    <a href="#">Separated link</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="jumbotron">
-                <h1>
-                    Hello, world!
-                </h1>
-                <p>
-                    This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
-                </p>
-                <p>
-                    <a class="btn btn-primary btn-large" href="#">Learn more</a>
-                </p>
-            </div>
-        </div>
+<div class="header">
+    <div class="dl-title">
+        <img src="${ctx}/image/jims.jpg">
     </div>
-    <div class="row clearfix">
-        <div class="col-md-4 column">
-            <h2>
-                Heading
-            </h2>
-            <p>
-                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-            </p>
-            <p>
-                <a class="btn" href="/table/create-table">View details »</a>
-            </p>
-        </div>
-        <div class="col-md-4 column">
-            <h2>
-                Heading
-            </h2>
-            <p>
-                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-            </p>
-            <p>
-                <a class="btn" href="#">View details »</a>
-            </p>
-        </div>
-        <div class="col-md-4 column">
-            <h2>
-                Heading
-            </h2>
-            <p>
-                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-            </p>
-            <p>
-                <a class="btn" href="#">View details »</a>
-            </p>
-        </div>
+
+    <div class="dl-log">欢迎您，<span class="dl-log-user">${userName}</span><a href="" title="退出系统"
+                                                                           class="dl-log-quit">[退出]</a>
     </div>
 </div>
+<div class="content">
+    <div class="dl-main-nav">
+        <div class="dl-inform">
+            <div class="dl-inform-title"><s class="dl-inform-icon dl-up"></s></div>
+        </div>
+        <ul id="J_Nav" class="nav-list ks-clear">
+            <li class="nav-item dl-selected">
+                <div class="nav-item-inner nav-home">系统管理</div>
+            </li>
+            <li class="nav-item dl-selected">
+                <div class="nav-item-inner nav-order">业务管理</div>
+            </li>
+        </ul>
+    </div>
+    <ul id="J_NavContent" class="dl-tab-conten">
+
+    </ul>
+</div>
+<script src="${ctx}/common/bootstrap/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="${ctx}/js/bui-min.js"></script>
+<script type="text/javascript" src="${ctx}/js/common/main-min.js"></script>
+<script type="text/javascript" src="${ctx}/js/config-min.js"></script>
+<script>
+    BUI.use('common/main', function () {
+        var config = [
+            {id: '1', menu: [
+                {text: '系统管理', items: [
+//                    {id: '12', text: '机构管理', href: 'Node/index.html'},
+                    {id: '3', text: '角色管理', href: 'Role/index.jsp'},
+                    {id: '4', text: '用户管理', href: 'User/index.html'},
+                    {id: '6', text: '菜单管理', href: 'Menu/index.html'}
+                ]}
+            ]},
+            {id: '7', homePage: '9', menu: [
+                {text: '业务管理', items: [
+                    {id: '9', text: '查询业务', href: 'Node/index.html'}
+                ]}
+            ]}
+        ];
+        new PageUtil.MainPage({
+            modulesConfig: config
+        });
+    });
+</script>
+<div style="text-align:center;">
+    <%--<p>来源：<a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>--%>
+</div>
 </body>
-    <script type="text/javascript" src="${ctx}/common/bootstrap/js/jquery-1.11.3.min.js"/>
-    <script type="text/javascript" src="${ctx}/common/bootstrap/js/bootstrap.min.js"/>
 </html>
