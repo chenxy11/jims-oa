@@ -16,6 +16,4 @@ public class UserDao {
     @PersistenceContext
     private EntityManager entityManager;
 
-
-
 }

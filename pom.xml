@@ -250,7 +250,13 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
+        <!--org.restlet.osgi:org.restlet.ext.servlet:2.1.7-->
+        <!--<dependency>-->
+            <!--<groupId>org.restlet.ext</groupId>-->
+            <!--<artifactId>org.restlet.ext</artifactId>-->
+            <!--<version>2.1.7</version>-->
+            <!--<optional>true</optional>-->
+        <!--</dependency>-->
 
         <!-- UUID -->
         <dependency>

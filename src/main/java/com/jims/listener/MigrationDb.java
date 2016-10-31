@@ -23,7 +23,7 @@ public class MigrationDb implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
 //          createACTtable();
-          createOAtable();
+//          createOAtable();
     }
 
     private void createOAtable() {

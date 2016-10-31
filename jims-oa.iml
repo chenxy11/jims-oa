@@ -35,6 +35,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test-mvc:1.0.0.M2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 6.0.26" level="application_server_libraries" />
+    <orderEntry type="library" name="org.restlet.jee:org.restlet.ext.servlet:2.3.4" level="application" />
     <orderEntry type="library" name="Maven: javax.servlet:jstl:1.2" level="project" />
     <orderEntry type="library" name="Maven: org.activiti:activiti-engine:5.19.0" level="project" />
     <orderEntry type="library" name="Maven: org.activiti:activiti-bpmn-converter:5.19.0" level="project" />
