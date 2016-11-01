@@ -6,6 +6,7 @@ import org.activiti.engine.IdentityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 
@@ -13,6 +14,7 @@ import javax.annotation.Resource;
  * Created by admin on 2016/10/28.
  */
 @Component
+@Transactional
 public class UserService {
 
     @Autowired

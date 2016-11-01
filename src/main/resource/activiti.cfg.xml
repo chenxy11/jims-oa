@@ -18,5 +18,5 @@
         <property name="jdbcUrl" value="${jdbc.url}"/>
         <property name="databaseSchemaUpdate" value="false"/>
         <property name="jobExecutorActivate" value="true"/>
-        <property name="databaseSchema" value="oa"/>    </bean>
+        <property name="databaseSchema" value="${jdbc.username}"/>    </bean>
 </beans>
