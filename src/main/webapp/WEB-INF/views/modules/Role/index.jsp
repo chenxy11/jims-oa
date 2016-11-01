@@ -2,6 +2,11 @@
 <html>
 <head>
     <title></title>
+    <!--一定要引入-->
+    <%@include file="/WEB-INF/views/common/common.jsp"%>
+    <link rel="stylesheet" type="text/css" href="${ctx}/common/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="${ctx}/css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="${ctx}/css/style.css" />
     <style type="text/css">
         body {
             padding-bottom: 40px;
@@ -33,26 +38,27 @@
             <tr>
                 <th>角色id</th>
                 <th>角色名称</th>
-                <th>状态</th>
+                <th>角色类型</th>
                 <th>操作</th>
             </tr>
             </thead>
-            <tr>
-                <td>5</td>
-                <td>管理员</td>
-                <td>1</td>
-                <td>
-                    <a href="edit.html">编辑</a>
-
-                </td>
-            </tr>
-        </table>
-</body>
-
+            <tbody>
+            <c:forEach items="${page.result}" var="group">
+                <tr>
+                    <td>group.id</td>
+                    <td>group.name</td>
+                    <td>group.type</td>
+                    <td>
+                        <a href="edit.html">编辑</a>
+                    </td>
+                </tr>
+            </c:forEach>
+          </tbody>
+         </table>
+         <tags:pagination page="${page}" paginationSize="${page.pageSize}"/>
+ </body>
     <script src="${ctx}/common/bootstrap/js/jquery-1.11.3.min.js"></script>
-
-    <script type="text/javascript" src="../Js/jquery.sorted.js"></script>
-    <script type="text/javascript" src="../Js/bootstrap.js"></script>
-    <script type="text/javascript" src="../Js/ckform.js"></script>
-    <script type="text/javascript" src="../Js/common.js"></script>
+    <script type="text/javascript" src="${ctx}/js/bootstrap.js"></script>
+    <script type="text/javascript" src="${ctx}/js/ckform.js"></script>
+    <script type="text/javascript" src="${ctx}/js/common.js"></script>
 </html>

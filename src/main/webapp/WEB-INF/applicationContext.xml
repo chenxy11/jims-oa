@@ -77,7 +77,7 @@
     <bean id="processEngineConfiguration" class="org.activiti.spring.SpringProcessEngineConfiguration">
         <property name="dataSource" ref="dataSource"/>
         <property name="transactionManager" ref="transactionManager"/>
-        <property name="databaseSchemaUpdate" value="true"/>
+        <property name="databaseSchemaUpdate" value="none"/>
         <property name="jobExecutorActivate" value="true"/>
         <property name="history" value="full"/>
         <property name="processDefinitionCacheLimit" value="10"/>
