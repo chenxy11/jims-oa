@@ -7,15 +7,8 @@
     <link href="${ctx}/css/style.css" rel="stylesheet" type="text/css">
     <script language="JavaScript" type="text/javascript" src="${ctx}/js/win_center.js"></script>
     <script language="javascript">
-        function windowOpen(theURL, winName, features, width, hight, scrollbars, top, left) {
-            var parameter = "top=" + top + ",left=" + left + ",width=" + width + ",height=" + hight;
-            if (scrollbars == "no") {
-                parameter += ",scrollbars=no";
-            }
-            else {
-                parameter += ",scrollbars=yes";
-            }
-            window.open(theURL, winName, parameter);
+        function toURl(theURL) {
+           location.href=theURL;
         }
     </script>
 </head>
@@ -37,7 +30,7 @@
     <table width="95%" border="0" cellspacing="0" cellpadding="0">
         <tr>
             <td align="right" class="td_page"><input name="Submit" type="button" class="buttonface02"
-                                                     onClick="javascript:openwindow('/page/create-model','',500,300)"
+                                                     onClick="javascript:toURl('/page/create-model')"
                                                      value="新建">
                 <input name="Submit" type="submit" class="buttonface02" onClick="confirm('确认删除？')" value="  删除  "></td>
         </tr>
