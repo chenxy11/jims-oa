@@ -39,6 +39,13 @@ public class PageController {
     }
 
 
+    @RequestMapping(value="/create-model")
+    public String createModel(){
+        return "modules/Model/create-model";
+    }
+
+
+
 
 
 }
