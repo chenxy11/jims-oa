@@ -477,8 +477,8 @@
                 <td width="19">&nbsp;</td>
                 <td width="19"><img src="${ctx}/images/tree_07.gif" width="19" height="20"></td>
                 <td width="19"><img src="${ctx}/images/tree_14.gif" width="19" height="20"></td>
-                <td nowrap><a href="${ctx}/html/workflow/design/processTypeList.htm" target="mainFrame"
-                              class="a03">流程类别列表</a></td>
+                <td nowrap><a href="/model/model-list" target="mainFrame"
+                              class="a03">模型列表</a></td>
             </tr>
         </table>
         <table width="100%" border="0" cellspacing="0" cellpadding="0">

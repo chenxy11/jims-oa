@@ -10,7 +10,7 @@
     request.setAttribute("begin", begin);
     request.setAttribute("end", end);
 %>
-<div class="pagination pagination-centered">
+<div class="pagination <%--pagination--%>-centered">
     <ul>
         <li class="disabled"><a>共${page.totalCount }条数据</a></li>
         <% if ((page.isHasNext() && current != 1) || (current == end && current != 1)){%>

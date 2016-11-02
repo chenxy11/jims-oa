@@ -38,8 +38,8 @@ public class ModelController {
      * 创建模型
      */
     @RequestMapping(value = "create-model", method = RequestMethod.POST)
-    public void createModel(@RequestParam("name") String name, @RequestParam("key") String key, @RequestParam("description") String description,
-                            HttpServletRequest request, HttpServletResponse response) {
+    public String createModel(@RequestParam("name") String name, @RequestParam("key") String key, @RequestParam("description") String description,
+                              HttpServletRequest request, HttpServletResponse response) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             ObjectNode editorNode = objectMapper.createObjectNode();
@@ -59,11 +59,15 @@ public class ModelController {
             modelData.setKey(StringUtils.defaultString(key));
             repositoryService.saveModel(modelData);
             repositoryService.addModelEditorSource(modelData.getId(), editorNode.toString().getBytes("utf-8"));
-            response.sendRedirect(request.getContextPath() + "/modeler.html?modelId=" + modelData.getId());
+//            response.sendRedirect(request.getContextPath() + "/modeler.html?modelId=" + modelData.getId());
+            return "redirect:/model-list";
         } catch (Exception e) {
             e.printStackTrace();
+            return "";
         }
     }
+
+
 
     /**
      * 模型列表
