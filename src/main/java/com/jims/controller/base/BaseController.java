@@ -5,13 +5,13 @@ import org.apache.log4j.Logger;
 /**
  * Created by admin on 2016/11/7.
  */
-public abstract class BaseController<T> {
+public abstract class BaseController{
 
-    private T t;
-    public BaseController(T t){
-        this.t=t;
-    }
-    protected   Logger logger = Logger.getLogger(t.getClass());
+    protected Class clazz;
 
+    protected  Logger logger = Logger.getLogger(clazz);
+
+
+    protected abstract void clazzType(Class clazz);
 
 }

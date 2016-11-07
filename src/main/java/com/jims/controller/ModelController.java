@@ -2,6 +2,7 @@ package com.jims.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.jims.controller.base.BaseController;
 import com.jims.util.Page;
 import com.jims.util.PageUtil;
 import org.activiti.editor.constants.ModelDataJsonConstants;
@@ -23,7 +24,12 @@ import java.util.List;
 
 @Controller
 @RequestMapping(value = "/model")
-public class ModelController {
+public class ModelController extends BaseController{
+
+    @Override
+    public void clazzType(Class clazz) {
+        super.clazz=ModelController.class;
+    }
 
 
     @Autowired
@@ -31,7 +37,8 @@ public class ModelController {
 
     @RequestMapping(value = "/create-model-pre")
     public String createModelPre() {
-        return "modules/Model/create-model";
+         System.out.println("logger:"+logger);
+         return "modules/Model/create-model";
     }
 
     /**
@@ -84,6 +91,7 @@ public class ModelController {
         mav.addObject("page", page);
         return mav;
     }
+
 
 
 }
